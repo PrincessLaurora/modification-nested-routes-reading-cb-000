@@ -4259,3 +4259,47 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/authors/8/posts" for 93.41.127.250 at 2019-06-30 13:57:09 +0000
+Cannot render console from 93.41.127.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"8"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 8]]
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 93.41.127.250 at 2019-06-30 13:57:24 +0000
+Cannot render console from 93.41.127.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE Author Load (0.0ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 93.41.127.250 at 2019-06-30 13:57:33 +0000
+Cannot render console from 93.41.127.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (12.2ms)
+  Rendered posts/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 93.41.127.250 at 2019-06-30 13:57:46 +0000
+Cannot render console from 93.41.127.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S0tFvAVpGzQi049YTkZUC6iER0NE9/9mI4595js3TK7uTWCXfISjfB7iFB2L/G0mKMrwBN3iOSQqOC3XTV0i6A==", "post"=>{"author_id"=>"", "title"=>"Pinguino", "description"=>"piccolino"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Pinguino"], ["description", "piccolino"], ["created_at", "2019-06-30 13:57:46.384991"], ["updated_at", "2019-06-30 13:57:46.384991"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://165.227.141.103:59016/posts/22
+Completed 302 Found in 6ms (ActiveRecord: 2.8ms)
+
+
