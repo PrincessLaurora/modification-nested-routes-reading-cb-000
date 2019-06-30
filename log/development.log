@@ -4438,3 +4438,15 @@ Processing by PostsController#edit as HTML
 Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.1ms)
 
 
+Started PATCH "/posts/25" for 93.41.127.250 at 2019-06-30 14:09:16 +0000
+Cannot render console from 93.41.127.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1gXYi7LSo3wIsSLrFtR/OPd1LVOqLSiXCYH9Rk5qY75zA/2gyz8bNDSAua7TbkYVdzuaFDM47tUAN613OAAN+A==", "post"=>{"author_id"=>"7", "title"=>"One Punch", "description"=>"Maaaan, human\r\n"}, "commit"=>"Update Post", "id"=>"25"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["description", "Maaaan, human\r\n"], ["updated_at", "2019-06-30 14:09:16.410536"], ["id", 25]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://165.227.141.103:59016/posts/25
+Completed 302 Found in 7ms (ActiveRecord: 3.5ms)
+
+
