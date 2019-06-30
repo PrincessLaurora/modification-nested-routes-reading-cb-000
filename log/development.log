@@ -4303,3 +4303,13 @@ Redirected to http://165.227.141.103:59016/posts/22
 Completed 302 Found in 6ms (ActiveRecord: 2.8ms)
 
 
+Started GET "/posts/22" for 93.41.127.250 at 2019-06-30 13:57:46 +0000
+Cannot render console from 93.41.127.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
